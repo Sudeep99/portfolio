@@ -42,7 +42,7 @@ export default function Home() {
       </div>
 
       <div className="skillset mt-5">
-        <h2>Skillset</h2>
+        <h2 className="text-4xl">Skillset</h2>
         <table className="skills-table mt-5">
           <thead>
             <tr>
@@ -77,8 +77,8 @@ export default function Home() {
         </table>
       </div>
 
-      <div className="work-ex">
-        <h2 className="mt-5">Work Experience</h2>
+      <div className="work-ex mt-5">
+        <h2 className="text-4xl">Work Experience</h2>
 
         <h4 className="mt-5">Thermo Fisher Scientific</h4>
         <p>Software Engineer</p>
@@ -119,8 +119,8 @@ export default function Home() {
         </ul>
       </div>
 
-      <div className="education">
-        <h2 className="mt-5">Education</h2>
+      <div className="education mt-5">
+        <h2 className="text-4xl">Education</h2>
         <table className="education-table mt-5">
           <thead>
             <tr>
