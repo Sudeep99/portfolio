@@ -1,5 +1,8 @@
 import Image from "next/image";
 import Link from "next/link";
+import SkillsTable from "./skillstable";
+import EducationTable from "./educationtable";
+import {Chip} from "@nextui-org/react";
 
 export default function Home() {
   return (
@@ -32,7 +35,7 @@ export default function Home() {
           </nav>
         </div>
       </header>
-      <div className="introduction">
+      <div className="introduction w-1/2">
         <h2 className="mt-5">Welcome to my Portfolio,</h2>
         <p>
           I&apos;m Sudeep Kumar P, a Software Engineer. I&apos;ve been working
@@ -42,47 +45,19 @@ export default function Home() {
       </div>
 
       <div className="skillset mt-5">
-        <h2 className="text-4xl">Skillset</h2>
-        <table className="skills-table mt-5">
-          <thead>
-            <tr>
-              <th>Category</th>
-              <th>Skills</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>Languages</td>
-              <td>
-                C++, C#, QT Markup Language (QML) Java, Python, Typescript
-              </td>
-            </tr>
-            <tr>
-              <td>Hardware</td>
-              <td>Arduino, Raspberry Pi, LPC 1768</td>
-            </tr>
-            <tr>
-              <td>Databases</td>
-              <td>PostgreSQL, MySQL, PlanetScale DB</td>
-            </tr>
-            <tr>
-              <td>Software</td>
-              <td>GitHub, NI LabVIEW, MATLAB Simulink, VMware , Jira, Visio</td>
-            </tr>
-            <tr>
-              <td>Other Skills</td>
-              <td>Experience in Implementing REST API calls and OPC UA</td>
-            </tr>
-          </tbody>
-        </table>
+        <h2 className="text-4xl mb-5 text-center">Skillset</h2>
+        <SkillsTable />
       </div>
 
-      <div className="work-ex mt-5">
-        <h2 className="text-4xl">Work Experience</h2>
+      <div className="work-ex mt-5 w-3/5">
+        <h2 className="text-4xl text-center">Work Experience</h2>
 
-        <h4 className="mt-5">Thermo Fisher Scientific</h4>
-        <p>Software Engineer</p>
-        <p>Jul 2021 - present</p>
+        <h4 className="mt-5"><b>Thermo Fisher Scientific</b></h4>
+        <p><i>Software Engineer I</i></p>
+        <p><i>Jul 2021 - present</i></p>
+        <Chip size="sm" variant="bordered">C++</Chip><Chip size="sm" variant="bordered">C#</Chip><Chip size="sm" variant="bordered">QML</Chip><Chip size="sm" variant="bordered">.Net Framework</Chip>
+        <Chip size="sm" variant="bordered">SQL</Chip><Chip size="sm" variant="bordered">GitHub</Chip><Chip size="sm" variant="bordered">PostgreSQL</Chip>
+        <Chip size="sm" variant="bordered">OPC Unified Architecture (OPC UA)</Chip><Chip size="sm" variant="bordered">REST APIs</Chip>
         <ul>
           <li>
             Currently developing REST API and OPC UA client functionality in C#
@@ -104,9 +79,11 @@ export default function Home() {
           </li>
         </ul>
 
-        <h4 className="mt-5">Thermo Fisher Scientific</h4>
-        <p>Intern, Research & Development</p>
-        <p>Dec 2020 - Jun 2021</p>
+        <h4 className="mt-5"><b>Thermo Fisher Scientific</b></h4>
+        <p><i>Intern, Research & Development</i></p>
+        <p><i>Dec 2020 - Jun 2021</i></p>
+        <Chip size="sm" variant="bordered">Python</Chip><Chip size="sm" variant="bordered">OpenCV</Chip><Chip size="sm" variant="bordered">C++</Chip><Chip size="sm" variant="bordered">Linux</Chip> 
+        <Chip size="sm" variant="bordered">TCP/IP</Chip><Chip size="sm" variant="bordered">MQTT</Chip>
         <ul>
           <li>
             Built various Proof of concepts applications using Python and C++,
@@ -117,34 +94,40 @@ export default function Home() {
             datasheets and making Pugh matrices.
           </li>
         </ul>
+
+        <h4 className="mt-5"><b>First Outcomes</b></h4>
+        <p><i>Intern</i></p>
+        <p><i>Sep 2020 - Oct 2020</i></p>
+        <Chip size="sm" variant="bordered">DialogFlow</Chip><Chip size="sm" variant="bordered">RestAPIs</Chip>
+        <ul>
+          <li>
+            Built and tested AI chatbots using DialogFlow and made Performance reports
+          </li>
+        </ul>
+
+        <h4 className="mt-5"><b>Voltas Limited - A TATA Enterprise</b></h4>
+        <p><i>Intern</i></p>
+        <p><i>May 2019</i></p>
+        <Chip size="sm" variant="bordered">SCADA</Chip><Chip size="sm" variant="bordered">Electrical Engineering</Chip>
+        <ul>
+          <li>
+            Internship at the Chennai Metro Rail Limited Project. Studied Power distribution systems and SCADA interfaces.
+          </li>
+        </ul>
+
+        <h4 className="mt-5"><b>Hindustan Coca-Cola Beverages Pvt Ltd</b></h4>
+        <p><i>Intern</i></p>
+        <p><i>Apr 2019</i></p>
+        <ul>
+          <li>
+            Researched and Updated all required and needed materials for the Firm and partners.
+          </li>
+        </ul>
       </div>
 
-      <div className="education mt-5">
-        <h2 className="text-4xl">Education</h2>
-        <table className="education-table mt-5">
-          <thead>
-            <tr>
-              <th>School</th>
-              <th>Location</th>
-              <th>Degree</th>
-              <th>Timeline</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>Vellore Institute of Technology</td>
-              <td>Amaravati, Andhra Pradesh</td>
-              <td>Bachelors, Electronics and Communications Engineering</td>
-              <td>Jul 2017-Jun 2021</td>
-            </tr>
-            <tr>
-              <td>Padma Seshadri Bala Bhavan - K.K Nagar</td>
-              <td>Chennai, Tamil Nadu</td>
-              <td>High School</td>
-              <td>Jun 2015-May 2017</td>
-            </tr>
-          </tbody>
-        </table>
+      <div className="education mt-5 text-center">
+        <h2 className="text-4xl mb-5">Education</h2>
+        <EducationTable />
       </div>
       <footer className="mt-5">
         <p>&copy; Copyright 2024 Sudeep Kumar P</p>
