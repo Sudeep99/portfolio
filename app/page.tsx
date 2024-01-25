@@ -2,7 +2,8 @@ import Image from "next/image";
 import Link from "next/link";
 import SkillsTable from "./skillstable";
 import EducationTable from "./educationtable";
-import {Chip} from "@nextui-org/react";
+import { Linkedin, Github, Code } from 'lucide-react';
+import { Chip, Button } from "@nextui-org/react";
 
 export default function Home() {
   return (
@@ -16,21 +17,27 @@ export default function Home() {
               href="https://www.linkedin.com/in/sudeep-kumar-p/"
               target="_blank"
             >
-              <button>LinkedIn</button>
+              <Button color="primary" variant="ghost" startContent={<Linkedin />}>
+                LinkedIn
+              </Button>
             </Link>
             <Link
               className="mr-4"
               href="https://www.github.com/Sudeep99"
               target="_blank"
             >
-              <button>GitHub</button>
+              <Button color="secondary" variant="ghost" startContent={<Github />}>
+                GitHub
+              </Button>
             </Link>
             <Link
               className="mr-4"
               href="https://www.hackerrank.com/profile/kumarpsudeep99"
               target="_blank"
             >
-              <button>Hackerrank</button>
+              <Button color="success" variant="ghost" startContent={<Code />}>
+                Hackerank
+              </Button>
             </Link>
           </nav>
         </div>
@@ -82,7 +89,7 @@ export default function Home() {
         <h4 className="mt-5"><b>Thermo Fisher Scientific</b></h4>
         <p><i>Intern, Research & Development</i></p>
         <p><i>Dec 2020 - Jun 2021</i></p>
-        <Chip size="sm" variant="bordered">Python</Chip><Chip size="sm" variant="bordered">OpenCV</Chip><Chip size="sm" variant="bordered">C++</Chip><Chip size="sm" variant="bordered">Linux</Chip> 
+        <Chip size="sm" variant="bordered">Python</Chip><Chip size="sm" variant="bordered">OpenCV</Chip><Chip size="sm" variant="bordered">C++</Chip><Chip size="sm" variant="bordered">Linux</Chip>
         <Chip size="sm" variant="bordered">TCP/IP</Chip><Chip size="sm" variant="bordered">MQTT</Chip>
         <ul>
           <li>
@@ -125,8 +132,8 @@ export default function Home() {
         </ul>
       </div>
 
-      <div className="education mt-5 text-center">
-        <h2 className="text-4xl mb-5">Education</h2>
+      <div className="education mt-5">
+        <h2 className="text-4xl mb-5 text-center">Education</h2>
         <EducationTable />
       </div>
       <footer className="mt-5">
