@@ -47,7 +47,7 @@ export default function Home() {
         <p>
           I&apos;m Sudeep Kumar P, a Software Engineer. I&apos;ve been working
           on building Windows applications using Qt/QML and also C# with
-          WinForms and have around 2.5 years of experience for the same.
+          WinForms and have around 3 years of experience for the same.
         </p>
       </div>
 
